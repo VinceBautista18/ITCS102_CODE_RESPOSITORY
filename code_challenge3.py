@@ -2,64 +2,44 @@ name = input("Input Sender name ----> ")
 
 type = input("Input Type of Item ----> ")
 
-is_Fragile = bool(input("Is the Product Fragile? -----> "))
+is_Fragile = bool(input("Is the Product Fragile?( Enter \"yes\" if yes, press Enter if no) -----> "))
 
-if is_Fragile:
-	base_cost += 10
+weight = float(input("Weight of the product? (in kg) ----> "))
 
-weight = float(input("Weight of the product in kg? ----> "))
+distance = float(input("Distance? (in km) ----->"))
 
-distance = float(input("How far is the buyer in km? ----->"))
+is_Express = bool(input("Is it Expres? (Enter \"yes\" if yes, press Enter if no) ----> "))
 
-is_Express = bool(input("Is it Expres? ----> "))
-
-if is_Express:
-	base_cost += 20
-
-is_International = bool(input("Is it International> ---> "))
-
-if is_International:
-	base_cost += 50
+is_International = bool(input("Is it International? (Enter \"yes\" if yes, press Enter if no) ---> "))
 
 base_cost = (weight * 2.50) + (distance * 0.15)
 
-if Total >= (base_cost * 1.40) + 50
+if weight <= 2 and distance  <= 100 and is_Express == False and is_International == False :
+	print("FREE SHIPPING")
+	Total = 0
 
-Total = (base_cost * 1.20) + 25
+elif is_International == True and is_Express == True :
+	print("Package is Express or Heavy International is applied")
+	Total = (base_cost * 1.2) + 50
 
-Total = base_cost + 30
+elif is_Express == True or (is_International == True and weight > 20):
+	print("Package is Express or Heavy International is applied") 
+	Total = (base_cost * 1.2) + 25
 
-Tota = base_cost
+elif weight > 30 or distance > 1000 :
+	print("Oversized is applied")
+	Total = base_cost + 30
 
+else:
+	Total = base_cost
+	print("Standard rate is applied")
+	
 
 print ("Hi, ",name, ", how are you doing today ?")
 
 print ("Your ",type, ",order is confirmed ")
 
-if is_Fragile == True:
-	print ("Baka mabasag to ingatan nyo")
-
-else:
-	print("Kahit ibalibag nyo yan")
-
-print = weight
-
-print = distance
-
-if is_Express == True:
-	print ("Ipriority nyo to")
-
-else:
-	print("kahit ihuli nyo pa yan")
-
-if is_International == True:
-	print ("Galing pa ito sa China")
-
-else:
-	print("Dito lang yan sa pinas")
-
-print("Expected Output", Total)
-
+print("Total Output : PHP ", Total)
 
 
 
