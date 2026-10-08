@@ -8,7 +8,7 @@ c_value = float(input("Collateral Value ------> "))
 
 max_loan = 0
 base_fee = 0
-
+surge_fee_rate = 0
 if age >= 21 and years >= 2.0 and has_defaults == False:
     print("Baseline Passed")
     if cc >= 720:
