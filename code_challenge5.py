@@ -1,7 +1,7 @@
-
-for i in range(5):
-    for j in range(5):
-        if i + j ==4 or i == j:
+size = int(input("Type your x-----------> "))
+for i in range(size):
+    for j in range(size):
+        if i + j == size - 1 or i == j:
             print("*", end=" ")
         else:
             print(" ", end= " ")
